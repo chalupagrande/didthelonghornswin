@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Did the longhorns win</title>
+    <style>
+      .hidden {
+        opacity: 0;
+      }
+      .show {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
-    <h1>i will win the war</h1>
+    <button id="button">Find out!</button><br />
+    <video class="hidden" id="player" width="1200" height="900">
+      <source
+        src="https://sudo-portfolio-space.sfo2.digitaloceanspaces.com/video/astley.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
   </body>
+  <script>
+    var player = document.getElementById("player");
+    var button = document.getElementById("button");
+    function show() {
+      player.setAttribute("class", "show");
+      player.play();
+    }
+
+    button.addEventListener("click", show);
+  </script>
 </html>
