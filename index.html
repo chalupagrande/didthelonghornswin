@@ -7,16 +7,26 @@
     <title>Did the longhorns win</title>
     <style>
       .hidden {
+        display: none;
         opacity: 0;
       }
       .show {
+        display: block;
         opacity: 1;
+      }
+
+      #player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
       }
     </style>
   </head>
   <body>
     <button id="button">Find out!</button><br />
-    <video class="hidden" id="player" width="1200" height="900">
+    <video class="hidden" id="player">
       <source
         src="https://sudo-portfolio-space.sfo2.digitaloceanspaces.com/video/astley.mp4"
         type="video/mp4"
